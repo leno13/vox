@@ -57,6 +57,10 @@ This command will search recursivly for all .js files in current dir and will re
         _t2('I have %s apple', 'I have %s apples', 43) // will return: I have 43 apples
 
 ## po2json.py
+First give execution rights to po2json.py
+
+    chmod +x po2json.py
+
 Convert the .po file to json format. Run the following command, for every .po file that you want to convert to .json.
 
     # command (2)
