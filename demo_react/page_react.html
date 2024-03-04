@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "vox": "../vox.js"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import vox from "vox"
+      console.log('voxy:', vox)
+      window.vox = vox
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="./script.js" type="text/babel"></script>
+  </body>
+</html>

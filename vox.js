@@ -2,10 +2,9 @@
 
 let vox = {}
 
-vox.dex = null              // this is the dictionary
-vox.pluralisation = null    // this is a function for the plural form
+vox.dex = null // this is the dictionary
+vox.pluralisation = null // this is a function for the plural form
 vox.debug = false
-
 
 // Please add wanted language to .mapPlurals
 // And also document yourself and create the plural function.
@@ -25,11 +24,12 @@ vox.mapPlurals = [
   }
 ]
 
-vox.initPluralisation = function () {
+vox.initPluralisation = function (arg_lang = null) {
   let OK = false
+  let crt_lang = arg_lang || navigator.language
   for (let group of vox.mapPlurals) {
     for (let lang of group.langs) {
-      if (navigator.language.includes(lang)) {
+      if (crt_lang.includes(lang)) {
         OK = true
         vox.pluralisation = group.plural
         vox.lang = lang
@@ -115,12 +115,7 @@ vox._t2 = function () {
   let np = vox.pluralisation(n) // get pluralisation : 0 or 1 or 2 etc
   let trans = ""
 
-  if (
-    vox.dex &&
-    sg in vox.dex.plural &&
-    vox.dex.plural[sg][np] !== undefined &&
-    vox.dex.plural[sg][np] !== ""
-  ) {
+  if (vox.dex && sg in vox.dex.plural && vox.dex.plural[sg][np] !== undefined && vox.dex.plural[sg][np] !== "") {
     trans = vox.dex.plural[sg][np]
   } else {
     // as fallback or no match
@@ -131,7 +126,6 @@ vox._t2 = function () {
   vox.debug && console.log("_t2-trans:", trans)
   return trans
 }
-
 
 // comment next line if used with vanilla javascript
 export default vox

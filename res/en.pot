@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-01 00:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: demo_cjs/main.cjs:9
+msgctxt "button"
+msgid "Hello"
+msgstr ""
+
+#: demo_react/script.js:11 demo_cjs/main.cjs:10
+#, javascript-format
+msgid "I have %s apple"
+msgid_plural "I have %s apples"
+msgstr[0] ""
+msgstr[1] ""
+
+#: demo_cjs/main.cjs:7
+msgid "My name is Skeller"
+msgstr ""
+
+#: demo_react/script.js:6
+msgid "SOAD - Hypnotize"
+msgstr ""
+
+#: demo_cjs/main.cjs:8
+msgid "Software for editing translations"
+msgstr ""
+
+#: demo_react/script.js:9
+msgid "Was fashion the reason why they were there"
+msgstr ""
+
+#: demo_react/script.js:8
+msgid "Why don't you ask the kids at Tienanmen Square"
+msgstr ""

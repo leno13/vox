@@ -1,12 +1,15 @@
 #!/usr/bin/python3.10
 
 import json, sys
+from os import path as ospath
 
 class Po2Json():
 
-    def __init__(self, FILE):
+    def __init__(self, FILE, ODIR):
         self.file = FILE
-        self.ofile = FILE.split('.po')[0] + ".json" # output file
+        self.ofile = ospath.basename(FILE).split('.po')[0]+ '.json'
+        self.ofile = ospath.join(ODIR, self.ofile)
+
         self.dex = {
             'meta'      :{},
             'context'   :{},
@@ -105,13 +108,24 @@ class Po2Json():
         # print(json.dumps(self.dex,indent=4))
 
     def save_json2file(self):
+
         with open(self.ofile, 'w') as f:
             f.write(json.dumps(self.dex, indent=4))
+            print(f"File {self.ofile} has been created")
 
 
 if __name__ == "__main__":
 
-    FILE = sys.argv[1]
-    p2j = Po2Json(FILE)
+    try:
+        FILE = sys.argv[1]
+        ODIR = './' if len(sys.argv) == 2 else sys.argv[2]
+    except:
+        print('First  argument: file.po')
+        print('Second argument: output dir, default: ./')
+        sys.exit()
+    if '.po' not in FILE:
+        print('File does not have extension .po')
+        sys.exit()
+    p2j = Po2Json(FILE, ODIR)
     p2j.save_json2file()
     print("Done")

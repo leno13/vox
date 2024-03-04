@@ -64,7 +64,12 @@ First give execution rights to po2json.py
 Convert the .po file to json format. Run the following command, for every .po file that you want to convert to .json.
 
     # command (2)
-    ./po2json.py de.po # generates de.json
+    
+    # generates de.json in current dir
+    ./po2json.py de.po 
+
+    # Specify output directory:
+    ./po2json.py de.po ./msg/translate
 
 ## New Translation
 1) Extract the strings by generating the .pot file with command (1)
@@ -81,6 +86,25 @@ Convert the .po file to json format. Run the following command, for every .po fi
 4) Update translations
 5) Save file ( Ctrl + S )
 6) Convert .po to .json with command (2)
+
+## API
+
+* `vox.initPluralisation()`
+
+    - set `vox.lang` to detected browser language
+
+    - 1st argument overwrite detection, usecase: node.js. eg: `vox.initPluralisation("jp")`
+
+* `vox.dex`
+
+    - store the translation obj
+
+* `vox.fetchDict(URL)`
+
+    - returns the fetched translation obj, usage:
+
+            vox.dex = await vox.fetchDict(URL)
+
 
 ## Example
 

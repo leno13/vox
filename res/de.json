@@ -1,0 +1,21 @@
+{
+    "meta": {},
+    "context": {
+        "button": {
+            "Hello": "Hallo"
+        }
+    },
+    "singular": {
+        "My name is Skeller": "Mijn naam is Skeller",
+        "SOAD - Hypnotize": "",
+        "Software for editing translations": "Software zum Bearbeiten von \u00dcbersetzungen",
+        "Was fashion the reason why they were there": "War die Mode der Grund, warum sie dort waren",
+        "Why don't you ask the kids at Tienanmen Square": "Warum fragen Sie nicht die Kinder auf dem Platz des Himmlischen Friedens"
+    },
+    "plural": {
+        "I have %s apple": [
+            "Ich habe %s Apfel",
+            "Ich habe %s \u00c4pfel"
+        ]
+    }
+}
